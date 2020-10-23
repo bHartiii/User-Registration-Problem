@@ -3,7 +3,7 @@ read -p "Enter First Name - " firstname
 pattern="^[A-Z]+[a-zA-Z0-9]{2,}"
 emailPattern="^[a-z0-9]{3,}(.[0-9a-z]+)*@[a-z]{2,}.(com|edu)(co.in)*$"
 phonePattern="^91 [6-9]{1}[0-9]{9}$"
-passwordRule="?=.*[A-Z])(?=.*[0-9])[0-9a-zA-Z]{8,}"
+passwordRule="((?=.*[A-Z])(?=.*[0-9])(?=[^\W]*[\W][^\W]*$)[0-9a-zA-Z].{8,})$"
 if [[ $firstname =~ $pattern ]]
 then
 	read -p "Enter Last Name - " lastname
