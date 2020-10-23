@@ -1,9 +1,16 @@
 #!/bin/bash -x
-read -p "Enter username - " username
+read -p "Enter First Name - " firstname
 pattern="^[A-Z]+[a-zA-Z0-9]{2,}"
-if [[ $username =~ $pattern ]]
+if [[ $firstname =~ $pattern ]]
 then
-        echo "YES"
-else
-        echo "NO"
+	read -p "Enter Last Name - " lastname
+	if [[ $lastname =~ $pattern ]]
+	then
+	        echo "YES"
+	else
+        	echo "NO"
+	fi
+else 
+	echo "Enter a valid name"
 fi
+
